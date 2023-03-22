@@ -20,17 +20,32 @@
   <title>Smart Device</title>
 </head>
 <body>
-  <h1>Smart Device – платы и комплектующие под Ваши нужды!</h1>
+  <h1 class="visually-hidden">Smart Device – платы и комплектующие под Ваши нужды!</h1>
 
   <header class="header">
-    <a class="logo clear-link" href="index.html">
-      <h2 class="visually-hidden">На главную.</h2>
-      <svg width="20" height="20">
-        <use href="img//sprite.svg#logo"></use>
-      </svg>
-      <p class="logo__descr">Smart Device</p>
-      <p class="logo__transl">умные технологии</p>
-    </a>
+    <div class="container container--header">
+      <a class="logo clear-link" href="index.html">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/components/logo-min.svg">
+          <img class="logo__img" src="img/components/logo.svg" width="215" height="auto" alt="На главную.">
+        </picture>
+      </a>
+      <ul class="header__info info clear-list">
+        <li class="info__item"><a class="info__link clear-link" href="mailto:info@sd.ru">
+          <svg class="info__icon" width="20" height="20">
+            <use href="img/sprite.svg#email"></use>
+          </svg>
+          <span class="info__text">info@sd.ru</span>
+        </a></li>
+        <li class="info__item"><a class="info__link clear-link" href="tel:+74950005252">
+          <svg class="info__icon" width="20" height="20">
+            <use href="img/sprite.svg#phone"></use>
+          </svg>
+          <span class="info__text">+7 (495) 000 52 52</span>
+        </a></li>
+      </ul>
+      <a class="header__button button button--order clear-link" href="#">Заказать звонок</a>
+    </div>
   </header>
 
   <main>
@@ -41,7 +56,36 @@
     <section><h2 class="visually-hidden">Lorem ipsum</h2></section>
   </main>
 
-  <footer></footer>
+  <footer class="footer">
+    <div class="container container--footer">
+      <section class="">
+        <h2 class="visually-hidden">Lorem ipsum</h2>
+      </section>
+      <ul class="clear-list">
+        <li>
+          <ul class="clear-list">
+            <li><a class="clear-link" href="#"><h2>Lorem, ipsum dolor.</h2></a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="clear-list">
+            <li><a class="clear-link" href="#"><h2>Lorem, ipsum dolor.</h2></a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a class="clear-link" href="#">Lorem ipsum dolor sit.</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
   <div class="modal"></div>
 

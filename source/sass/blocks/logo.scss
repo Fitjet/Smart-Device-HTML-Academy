@@ -1,0 +1,7 @@
+.logo__img {
+  @include vp-767 {
+    margin-top: 5px;
+    height: auto;
+    width: 35px;
+  }
+}

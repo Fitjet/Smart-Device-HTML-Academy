@@ -1,0 +1,38 @@
+.info {
+  display: flex;
+  gap: 30px;
+
+  @include vp-1023 {
+    align-self: flex-start;
+    gap: 20px;
+  }
+}
+
+.info__item {
+  @include vp-1024-more {
+    width: 225px;
+  }
+}
+
+.info__link {
+  display: flex;
+  padding: 10px 0;
+  // align-items: center;
+  width: fit-content;
+  gap: 15px;
+
+  @include vp-1023 {
+    padding: 10px;
+  }
+}
+
+.info__icon {
+  display: block;
+}
+
+.info__text {
+  @include pt-r-s16-h18;
+  @include vp-1023 {
+    display: none;
+  }
+}

@@ -8,10 +8,14 @@
 @import "global/fonts";
 @import "global/visually-hidden";
 @import "global/clear";
+@import "global/container";
 
 /* BLOCKS */
-// @import "blocks/header";
-// @import "blocks/logo";
+@import "blocks/header";
+@import "blocks/info";
+@import "blocks/logo";
 // @import "blocks/user-nav";
+@import "blocks/accordion";
+@import "blocks/data-accordion";
 
 // @import "blocks/footer";

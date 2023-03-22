@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(180deg, $black 85%, $transparent 100%);
+  color: $white-sec;
+
+  @include vp-767 {
+    background: linear-gradient(180deg, $black 70%, $transparent 100%);
+  }
+}
+
+.header__button {
+  @include vp-1023 {
+    display: none;
+  }
+}

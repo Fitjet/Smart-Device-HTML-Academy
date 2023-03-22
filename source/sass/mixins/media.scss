@@ -4,6 +4,12 @@
   }
 }
 
+@mixin vp-1024-more {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
+
 @mixin vp-1023 {
   @media (max-width: ($vp-1024 - 1px)) {
     @content;
