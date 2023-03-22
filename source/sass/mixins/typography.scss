@@ -1,0 +1,134 @@
+@mixin typography_template($font-size, $line-height, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-style: normal;
+  line-height: $line-height;
+}
+
+@mixin r-font {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+@mixin rc-font {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+@mixin pt-font {
+  font-family: "PT Mono", "Arial", sans-serif;
+}
+
+
+@mixin r-m-s12-h14 {
+  @include typography_template(12px, 14px, 500);
+  @include r-font;
+}
+
+@mixin rc-r-s15-h16 {
+  @include typography_template(15px, 16px);
+  @include rc-font;
+}
+
+@mixin rc-r-s18-h30 {
+  @include typography_template(18px, 30px);
+  @include rc-font;
+}
+
+@mixin rc-r-s20-h28 {
+  @include typography_template(20px, 28px);
+  @include rc-font;
+}
+
+@mixin rc-r-s20-h30 {
+  @include typography_template(20px, 30px);
+  @include rc-font;
+}
+
+@mixin rc-r-s24-h34 {
+  @include typography_template(24px, 34px);
+  @include rc-font;
+}
+
+@mixin rc-r-s28-h39 {
+  @include typography_template(28px, 39px);
+  @include rc-font;
+}
+
+@mixin rc-r-s30-h42 {
+  @include typography_template(30px, 42px);
+  @include rc-font;
+}
+
+@mixin rc-r-s36-h51 {
+  @include typography_template(36px, 51px);
+  @include rc-font;
+}
+
+@mixin rc-b-s14-h16 {
+  @include typography_template(14px, 16px, 700);
+  @include rc-font;
+}
+
+@mixin rc-b-s16-h19 {
+  @include typography_template(16px, 19px, 700);
+  @include rc-font;
+}
+
+@mixin rc-b-s18-h21 {
+  @include typography_template(18px, 21px, 700);
+  @include rc-font;
+}
+
+@mixin rc-b-s25-h29 {
+  @include typography_template(25px, 29px, 700);
+  @include rc-font;
+}
+
+@mixin rc-b-s36-h42 {
+  @include typography_template(36px, 42px, 700);
+  @include rc-font;
+}
+
+@mixin rc-b-s64-h75 {
+  @include typography_template(64px, 75px, 700);
+  @include rc-font;
+}
+
+@mixin rc-b-s80-h94 {
+  @include typography_template(80px, 94px, 700);
+  @include rc-font;
+}
+
+@mixin rc-b-s156-h220 {
+  @include typography_template(156px, 220px, 700);
+  @include rc-font;
+}
+
+@mixin pt-r-s14-h16 {
+  @include typography_template(14px, 16px);
+  @include pt-font;
+}
+
+@mixin pt-r-s14-h19 {
+  @include typography_template(14px, 19px);
+  @include pt-font;
+}
+
+@mixin pt-r-s14-h22 {
+  @include typography_template(14px, 22px);
+  @include pt-font;
+}
+
+@mixin pt-r-s16-h18 {
+  @include typography_template(16px, 18px);
+  @include pt-font;
+}
+
+@mixin pt-r-s16-h22 {
+  @include typography_template(16px, 22px);
+  @include pt-font;
+}
+
+@mixin pt-r-s22-h34 {
+  @include typography_template(22px, 34px);
+  @include pt-font;
+}

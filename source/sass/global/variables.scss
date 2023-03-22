@@ -1,15 +1,36 @@
 /* COLORS */
+$white-base:        #ffffff;
+$white-base-opac:   rgba(255, 255, 255, 0.7);
+$white-fir:         #f8fdff;
+$white-fir-opac:    rgba(248, 253, 255, 0.7);
+$white-sec:         #f2f5f6;
+$light-grey:        #ebebeb;
 
-$white-base: #ffffff;
-$white-base-opac: rgba(255, 255, 255, 0.7);
-$white-fir: #f8fdff;
-$white-fir-opac: rgba(248, 253, 255, 0.7);
-$white-sec: #f2f5f6;
-$light-grey: #ebebeb;
+$black:             #041827;
+$black-opac:        rgba(4, 20, 39, 0.15);
+$transparent:       rgba(255, 255, 255, 0);
 
-$black: #041827;
-$black-opac: rgba(4, 20, 39, 0.15);
+$azure:             #00b2ff;
+$blue:              #026593;
+$dark-blue:         #041427;
 
-$azure: #00b2ff;
-$blue: #026593;
-$dark-blue: #041427;
+/* ANIMATION */
+$tf-default:          ease;
+$trans-default:       0.3s $tf-default;
+
+/* TEXT */
+$fz-default: 16px;
+
+/* LINKS */
+$bg-main:             url("../img/background/main-bg.jpg");
+$bg-main-ret:         url("../img/background/main-bg@2x.jpg");
+$bg-text:             url("../img/background/text-bg.jpg");
+$bg-text-ret:         url("../img/background/text-bg@2x.jpg");
+
+/* VIEWPORTS */
+$vp-768:              768px;
+$vp-1024:             1024px;
+
+/* RETINA */
+$retina-dpi:          144dpi;
+$retina-dppx:         1.5dppx;

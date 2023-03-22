@@ -1,23 +1,17 @@
-@mixin tablet-more {
-  @media (min-width: 768px) {
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
   }
 }
 
-@mixin desctop-more {
-  @media (min-width: 1440px) {
+@mixin vp-1023 {
+  @media (max-width: ($vp-1024 - 1px)) {
     @content;
   }
 }
 
-@mixin mobile {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (min-width: 768px) and (max-width: 1399px) {
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
     @content;
   }
 }
