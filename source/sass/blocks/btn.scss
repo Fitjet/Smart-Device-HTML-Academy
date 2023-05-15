@@ -1,0 +1,79 @@
+.btn {
+  display: inline-flex;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: $transparent;
+  color: $white-sec;
+  text-transform: uppercase;
+
+  border: none;
+  cursor: pointer;
+
+  transition: opacity $trans-default, background-color $trans-default, color $trans-default;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  &--banner {
+    background-color: $azure;
+    padding: 17px 27px;
+
+    @include vp-767 {
+      padding: 12px 0;
+    }
+  }
+
+  &--order {
+    border: 1px solid $white-sec;
+    padding: 11px 16px;
+  }
+
+  &--more {
+    border: 1px solid $azure;
+    color: $azure;
+    justify-content: center;
+    min-width: 180px;
+    padding: 14px 0;
+
+    & > span:last-child {
+      display: none;
+    }
+
+    &.is-clicked > span:last-child {
+      display: block;
+    }
+
+    &.is-clicked > span:first-child {
+      display: none;
+    }
+
+    @include hover-focus {
+      background-color: $azure;
+      color: $white-base;
+    }
+
+    @include vp-767 {
+      min-width: 160px;
+      padding: 8px;
+    }
+  }
+
+  &--form {
+    background-color: $dark-blue;
+    justify-content: center;
+    width: 265px;
+    padding: 16px 0 10px;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+    outline: none;
+  }
+}

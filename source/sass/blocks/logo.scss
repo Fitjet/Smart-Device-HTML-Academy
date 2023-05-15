@@ -1,7 +1,10 @@
-.logo__img {
+.logo img {
+  height: auto;
+  min-width: 215px;
+
   @include vp-767 {
     margin-top: 5px;
-    height: auto;
+    min-width: 35px;
     width: 35px;
   }
 }

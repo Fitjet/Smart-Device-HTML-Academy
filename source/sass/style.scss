@@ -1,21 +1,31 @@
-/* MIXINS */
-@import "mixins/media.scss";
-@import "mixins/typography.scss";
+@import "variables";
+@import "mixins";
 
 /* GLOBAL */
-@import "global/variables";
+@import "global/typography";
 @import "global/reboot";
 @import "global/fonts";
 @import "global/visually-hidden";
-@import "global/clear";
+@import "global/clear-list";
 @import "global/container";
+@import "global/scroll-lock";
 
 /* BLOCKS */
+@import "blocks/btn";
+@import "blocks/modal";
+@import "blocks/custom-input";
+@import "blocks/custom-toggle";
+@import "blocks/custom-select";
 @import "blocks/header";
 @import "blocks/info";
 @import "blocks/logo";
-// @import "blocks/user-nav";
+@import "blocks/banner";
+@import "blocks/advant";
+@import "blocks/company";
+@import "blocks/services";
+@import "blocks/questions";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/helpful-links";
 @import "blocks/accordion";
 @import "blocks/data-accordion";
-
-// @import "blocks/footer";

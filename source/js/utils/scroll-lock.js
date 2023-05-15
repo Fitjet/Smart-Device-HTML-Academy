@@ -6,6 +6,7 @@ export class ScrollLock {
     this._lockClass = this._iosChecker() ? 'scroll-lock-ios' : 'scroll-lock';
     this._scrollTop = null;
     this._fixedBlockElements = document.querySelectorAll('[data-fix-block]');
+    this._colorBlockElements = document.querySelectorAll('[data-color-block]');
   }
 
   _getScrollbarWidth() {
@@ -27,6 +28,10 @@ export class ScrollLock {
       this._fixedBlockElements.forEach((block) => {
         block.style.paddingRight = `${this._getScrollbarWidth()}px`;
       });
+      this._colorBlockElements.forEach((block) => {
+        block.style.paddingRight = `${this._getScrollbarWidth()}px`;
+        block.style.marginRight = `-${this._getScrollbarWidth()}px`;
+      });
     }
     document.body.style.top = `-${this._scrollTop}px`;
     document.body.classList.add(this._lockClass);
@@ -39,6 +44,10 @@ export class ScrollLock {
     document.body.style.top = null;
     this._fixedBlockElements.forEach((block) => {
       block.style.paddingRight = null;
+    });
+    this._colorBlockElements.forEach((block) => {
+      block.style.paddingRight = null;
+      block.style.marginRight = null;
     });
     document.body.removeAttribute('data-scroll');
     this._scrollTop = null;

@@ -1,0 +1,100 @@
+.company {
+  margin-bottom: 105px;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 100px;
+
+    @include vp-1023 {
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    @include rc-r-s36-h51;
+    margin: 0 0 12px;
+
+    @include vp-767 {
+      @include rc-r-s28-h39;
+    }
+  }
+
+  &__button {
+    @include rc-b-s14-h16;
+    letter-spacing: 0.05em;
+    margin: 16px 0 0;
+
+    @include vp-1023 {
+      margin: 0;
+    }
+
+    @include vp-767 {
+      margin-top: -3px;
+    }
+  }
+
+  &__wrapper p {
+    @include pt-r-s16-h22;
+    margin: 0 0 22px;
+
+    @include vp-1023 {
+      margin-bottom: 17px;
+    }
+
+    @include vp-767 {
+      @include pt-r-s14-h19;
+      margin-bottom: 18px;
+
+      & > .mobile-hide {
+        display: none;
+      }
+    }
+  }
+
+  &__content > p {
+    &:first-child {
+      margin-top: 0;
+      display: none;
+    }
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+
+    @include vp-767 {
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
+  &__year {
+    margin: 10px 3px 0 32px;
+
+    img {
+      clip-path: url("#svgPath");
+      min-width: 115px;
+    }
+
+    svg {
+      display: block;
+    }
+
+    text {
+      @include rc-b-s156-h220;
+      transform: rotate(-90deg);
+    }
+
+    @include vp-1023 {
+      margin: 14px 2px 0 28px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}

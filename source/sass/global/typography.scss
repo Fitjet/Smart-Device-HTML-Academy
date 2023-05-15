@@ -118,6 +118,11 @@
   @include pt-font;
 }
 
+@mixin pt-r-s14-h25 {
+  @include typography_template(14px, 25px);
+  @include pt-font;
+}
+
 @mixin pt-r-s16-h18 {
   @include typography_template(16px, 18px);
   @include pt-font;
@@ -125,6 +130,11 @@
 
 @mixin pt-r-s16-h22 {
   @include typography_template(16px, 22px);
+  @include pt-font;
+}
+
+@mixin pt-r-s16-h25 {
+  @include typography_template(16px, 25px);
   @include pt-font;
 }
 

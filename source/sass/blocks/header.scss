@@ -3,15 +3,31 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 5;
   background: linear-gradient(180deg, $black 85%, $transparent 100%);
   color: $white-sec;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 110px 35px 50px;
+
+  @include vp-1023 {
+    padding: 20px 70px 25px 50px;
+  }
 
   @include vp-767 {
-    background: linear-gradient(180deg, $black 70%, $transparent 100%);
+    padding: 10px 35px 20px 26px;
   }
 }
 
 .header__button {
+  @include rc-b-s14-h16;
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+
   @include vp-1023 {
     display: none;
   }

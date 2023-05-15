@@ -1,38 +1,43 @@
 .info {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px 27px;
+  padding: 0 16px 6px 28px;
 
   @include vp-1023 {
     align-self: flex-start;
     gap: 20px;
+    padding: 0;
   }
-}
 
-.info__item {
-  @include vp-1024-more {
-    width: 225px;
+  li {
+    @include vp-1024 {
+      min-width: fit-content;
+      width: 225px;
+    }
   }
-}
 
-.info__link {
-  display: flex;
-  padding: 10px 0;
-  // align-items: center;
-  width: fit-content;
-  gap: 15px;
+  a {
+    display: flex;
+    padding: 10px 0;
+    width: fit-content;
+    gap: 15px;
 
-  @include vp-1023 {
-    padding: 10px;
+    @include vp-1023 {
+      padding: 10px;
+    }
   }
-}
 
-.info__icon {
-  display: block;
-}
+  svg {
+    display: block;
+  }
 
-.info__text {
-  @include pt-r-s16-h18;
-  @include vp-1023 {
-    display: none;
+  span {
+    @include pt-r-s16-h18;
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 }
