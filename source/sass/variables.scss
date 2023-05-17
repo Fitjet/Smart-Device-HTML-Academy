@@ -1,24 +1,28 @@
 /* COLORS */
-$white-base:        #ffffff;
-$white-base-opac:   rgba(255, 255, 255, 0.7);
-$white-fir:         #f8fdff;
-$white-fir-opac:    rgba(248, 253, 255, 0.7);
-$white-sec:         #f2f5f6;
-$light-grey:        #ebebeb;
+$white-base:          #ffffff;
+$white-base-opac:     rgba(255, 255, 255, 0.7);
+$white-fir:           #f8fdff;
+$white-fir-opac:      rgba(248, 253, 255, 0.7);
+$white-sec:           #f2f5f6;
+$light-grey:          #ebebeb;
 
-$black:             #041827;
-$black-opac:        rgba(4, 20, 39, 0.15);
-$black-mask:        rgba(4, 20, 39, 0.5);
-$transparent:       rgba(255, 255, 255, 0);
+$black:               #041827;
+$black-opac:          rgba(4, 20, 39, 0.15);
+$black-mask:          rgba(4, 20, 39, 0.5);
+$transparent:         rgba(255, 255, 255, 0);
 
-$azure:             #00b2ff;
-$blue:              #026593;
-$dark-blue:         #041427;
-$blue-opac:         rgba(25, 32, 36, 0.7);
+$azure:               #00b2ff;
+$blue:                #026593;
+$dark-blue:           #041427;
+$blue-opac:           rgba(25, 32, 36, 0.7);
 
-$error:             #ff1500;
-$error-opac:        rgba(255, 20, 0, 0.5);
-$valid-opac:        rgba(21, 171, 0, 0.5);
+$error:               #ff1500;
+$error-opac:          rgba(255, 20, 0, 0.5);
+$valid-opac:          rgba(21, 171, 0, 0.5);
+
+/* GRADIENT */
+$gradient-header:     linear-gradient(180deg, $black 85%, $transparent 100%);
+$gradient-banner:     linear-gradient(180deg, $blue-opac 71.72%, $transparent 100%);
 
 /* ANIMATION */
 $tf-default:          ease;
@@ -29,16 +33,6 @@ $trans-modal:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
 /* TEXT */
 $fz-default: 16px;
 
-/* LINKS */
-$bg-main:             url("../img/background/main-bg.jpg");
-$bg-main-ret:         url("../img/background/main-bg@2x.jpg");
-$bg-text:             url("../img/background/text-bg.jpg");
-$bg-text-ret:         url("../img/background/text-bg@2x.jpg");
-
 /* VIEWPORTS */
 $vp-768:              768px;
 $vp-1024:             1024px;
-
-/* RETINA */
-$retina-dpi:          144dpi;
-$retina-dppx:         1.5dppx;

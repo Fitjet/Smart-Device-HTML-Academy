@@ -9,10 +9,10 @@
     width: 100%;
     text-align: center;
   }
+}
 
-  img {
-    min-width: 215px;
-  }
+.helpful-links img {
+  min-width: 215px;
 }
 
 .helpful-links__logo-link {
@@ -48,13 +48,13 @@
     margin: 15px auto 24px;
     padding: 0 0 0 3px;
   }
+}
 
-  a {
-    display: block;
-    padding: 5px;
-  }
+.helpful-links__social a {
+  display: block;
+  padding: 5px;
+}
 
-  svg {
-    display: block;
-  }
+.helpful-links__social svg {
+  display: block;
 }

@@ -10,34 +10,34 @@
     gap: 20px;
     padding: 0;
   }
+}
 
-  li {
-    @include vp-1024 {
-      min-width: fit-content;
-      width: 225px;
-    }
+.info li {
+  @include vp-1024 {
+    min-width: fit-content;
+    width: 225px;
   }
+}
 
-  a {
-    display: flex;
-    padding: 10px 0;
-    width: fit-content;
-    gap: 15px;
+.info a {
+  display: flex;
+  padding: 10px 0;
+  width: fit-content;
+  gap: 15px;
 
-    @include vp-1023 {
-      padding: 10px;
-    }
+  @include vp-1023 {
+    padding: 10px;
   }
+}
 
-  svg {
-    display: block;
-  }
+.info svg {
+  display: block;
+}
 
-  span {
-    @include pt-r-s16-h18;
+.info span {
+  @include pt-r-s16-h18;
 
-    @include vp-1023 {
-      display: none;
-    }
+  @include vp-1023 {
+    display: none;
   }
 }

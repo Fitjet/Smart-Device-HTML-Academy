@@ -9,7 +9,9 @@
   border: none;
   cursor: pointer;
 
-  transition: opacity $trans-default, background-color $trans-default, color $trans-default;
+  transition: opacity $trans-default,
+    background-color $trans-default,
+    color $trans-default;
 
   &:disabled {
     opacity: 0.5;

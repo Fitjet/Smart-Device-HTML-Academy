@@ -7,17 +7,6 @@
 
   @include vp-1024 {
     min-height: 840px;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 49.5%;
-      height: 0;
-      width: 0;
-      content: "";
-      border: 50.5vw solid $transparent;
-      border-top: 840px solid $blue;
-    }
   }
 
   @include vp-1023 {
@@ -27,24 +16,37 @@
   @include vp-767 {
     padding: 47px 0 88px;
   }
+}
 
-  &__img {
-    margin-top: 28px;
+.questions__img {
+  margin-top: 28px;
 
-    @include vp-1023 {
-      display: none;
-    }
+  @include vp-1023 {
+    display: none;
   }
+}
 
-  &__container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+.questions__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 
-    @include vp-1023 {
-      gap: 0;
-    }
+  @include vp-1023 {
+    gap: 0;
+  }
+}
+
+@include vp-1024 {
+  .questions::before {
+    position: absolute;
+    top: 0;
+    right: 49.5%;
+    height: 0;
+    width: 0;
+    content: "";
+    border: 50.5vw solid $transparent;
+    border-top: 840px solid $blue;
   }
 }

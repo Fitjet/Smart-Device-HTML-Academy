@@ -1,218 +1,216 @@
 .form {
   color: $white-base;
 
-  &:not(&--modal) {
-    width: 100%;
-
-    @include vp-1024 {
-      max-width: 590px;
-      padding-right: 10px;
-    }
-  }
-
   @include vp-1023 {
     min-width: 100%;
   }
+}
 
-  &:not(&--modal) &__title {
-    @include rc-r-s36-h51;
-    margin: 0;
+.form__text {
+  @include pt-r-s16-h22;
+  margin: 12px 0 35px;
 
-    @include vp-1024 {
-      margin-left: -5px;
-    }
-
-    @include vp-767 {
-      @include rc-r-s30-h42;
-    }
+  @include vp-1023 {
+    margin: 7px 0 25px;
   }
 
-  &__text {
-    @include pt-r-s16-h22;
-    margin: 12px 0 35px;
+  @include vp-767 {
+    @include pt-r-s14-h19;
+    margin-bottom: 34px;
+  }
+}
 
-    @include vp-1023 {
-      margin: 7px 0 25px;
-    }
+.form form {
+  display: grid;
+  gap: 20px 30px;
+}
 
-    @include vp-767 {
-      @include pt-r-s14-h19;
-      margin-bottom: 34px;
-    }
+.form form > * {
+  align-self: flex-end;
+}
+
+.form label > input,
+.form label > textarea {
+  @include pt-r-s16-h22;
+  display: block;
+  border: none;
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 3px;
+  background-color: $black-opac;
+  color: $white-base;
+  transition: background-color $trans-default,
+    opacity $trans-default;
+
+  &::placeholder {
+    font: inherit;
+    color: inherit;
+  }
+}
+
+.form label > textarea {
+  height: 100%;
+  max-height: 100%;
+  padding-top: 23px;
+  padding-bottom: 23px;
+
+  @include vp-1023 {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
-  form {
-    display: grid;
-    gap: 20px 30px;
-    align-items: flex-end;
+  @include vp-767 {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+}
+
+.form label.is-valid > input,
+.form label.is-valid > textarea {
+  background-color: $valid-opac;
+}
+
+.form label.is-invalid > input {
+  background-color: $error-opac;
+}
+
+.form__textarea-label {
+  grid-column: 1/-1;
+  height: 155px;
+
+  @include vp-767 {
+    height: 180px;
+  }
+}
+
+.form__data-proc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 260px;
+  cursor: pointer;
+  padding: 0 0 0 10px;
+
+  @include vp-1023 {
+    padding: 0;
+    margin-bottom: 3px;
   }
 
-  &:not(&--modal) form {
-    grid-template-columns: 1fr 1fr;
-
-    @include vp-767 {
-      grid-template-columns: 1fr;
-    }
+  @include vp-767 {
+    max-width: 100%;
+    justify-content: center;
+    margin: 5px 0 0 5px;
   }
 
-  &--modal form {
+  @include hover-focus {
+    opacity: 0.8;
+    outline: none;
+  }
+}
+
+.form .form__data-proc input {
+  display: none;
+}
+
+.form__data-proc svg {
+  display: block;
+  position: relative;
+  max-width: 15px;
+  max-height: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  border: 1px solid $white-base;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  padding: 3px 3px 4px 1px;
+  transition: border-color $trans-default,
+    opacity $trans-default;
+
+  stroke: none;
+}
+
+.form__data-proc span {
+  @include pt-r-s14-h16;
+  opacity: 0.8;
+  margin: 0;
+  transition: color $trans-default,
+    opacity $trans-default;
+}
+
+.form .is-invalid .form__data-proc {
+  color: $error;
+}
+
+.form .is-invalid .form__data-proc svg {
+  border-color: $error;
+}
+
+.form .is-valid .form__data-proc svg {
+  stroke: $white-base;
+}
+
+.form__button {
+  @include rc-b-s16-h19;
+  letter-spacing: 0.05em;
+  margin-top: 15px;
+
+  @include vp-767 {
+    margin-top: 10px;
+  }
+}
+
+.form:not(.form--modal) {
+  width: 100%;
+
+  @include vp-1024 {
+    max-width: 590px;
+    padding-right: 10px;
+  }
+}
+
+.form:not(.form--modal) form {
+  grid-template-columns: 1fr 1fr;
+
+  @include vp-767 {
     grid-template-columns: 1fr;
+  }
+}
 
-    .form__button {
-      width: 100%;
-    }
+.form:not(.form--modal) .form__title {
+  @include rc-r-s36-h51;
+  margin: 0;
 
-    .form__data-proc {
-      max-width: 100%;
-    }
+  @include vp-1024 {
+    margin-left: -5px;
   }
 
-  form > div {
-    & > input,
-    & > textarea {
-      @include pt-r-s16-h22;
-      display: block;
-      border: none;
-      width: 100%;
-      padding: 14px 15px;
-      border-radius: 3px;
-      background-color: $black-opac;
-      color: $white-base;
-      transition: background-color $trans-default, opacity $trans-default;
-
-      &::placeholder {
-        font: inherit;
-        color: inherit;
-      }
-    }
-
-    & > textarea {
-      height: 100%;
-      max-height: 100%;
-      padding-top: 23px;
-      padding-bottom: 23px;
-
-      @include vp-1023 {
-        padding-top: 30px;
-        padding-bottom: 30px;
-      }
-
-      @include vp-767 {
-        padding-top: 23px;
-        padding-bottom: 23px;
-      }
-    }
-
-    &.is-valid > input,
-    &.is-valid > textarea {
-      background-color: $valid-opac;
-    }
-
-    &.is-invalid > input {
-      background-color: $error-opac;
-    }
+  @include vp-767 {
+    @include rc-r-s30-h42;
   }
+}
 
-  &__textarea {
-    grid-column: 1/-1;
-    height: 155px;
+.form--modal form {
+  grid-template-columns: 1fr;
+}
 
-    @include vp-767 {
-      height: 180px;
-    }
-  }
+.form--modal .form__title {
+  @include rc-r-s30-h42;
+  margin: 0;
+}
 
-  &__data-proc {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    max-width: 260px;
-    cursor: pointer;
-    padding: 0 0 0 10px;
+.form--modal .form__text {
+  margin: 4px 0 38px;
+}
 
-    input {
-      display: none;
-    }
+.form--modal .form__button {
+  margin-top: 5px;
+  width: 100%;
+}
 
-    svg {
-      display: block;
-      position: relative;
-      max-width: 15px;
-      max-height: 15px;
-      min-width: 15px;
-      min-height: 15px;
-      border: 1px solid $white-base;
-      border-radius: 2px;
-      margin-bottom: 4px;
-      padding: 3px 3px 4px 1px;
-      transition: border-color $trans-default, opacity $trans-default;
-      stroke: $azure;
-    }
+.form--modal .form__data-proc {
+  max-width: 100%;
+}
 
-    span {
-      @include pt-r-s14-h16;
-      opacity: 0.8;
-      margin: 0;
-      transition: color $trans-default, opacity $trans-default;
-    }
-
-    @include vp-1023 {
-      padding: 0;
-      margin-bottom: 3px;
-    }
-
-    @include vp-767 {
-      max-width: 100%;
-      justify-content: center;
-      margin: 5px 0 0 5px;
-    }
-
-    @include hover-focus {
-      opacity: 0.8;
-      outline: none;
-    }
-  }
-
-  .is-invalid &__data-proc {
-    color: $error;
-
-    svg {
-      border-color: $error;
-    }
-  }
-
-  .is-valid &__data-proc {
-    svg {
-      stroke: $white-base;
-    }
-  }
-
-  &__button {
-    @include rc-b-s16-h19;
-    letter-spacing: 0.05em;
-    margin-top: 15px;
-
-    @include vp-767 {
-      margin-top: 10px;
-    }
-  }
-
-  &--modal {
-    .form__title {
-      @include rc-r-s30-h42;
-      margin: 0;
-    }
-
-    .form__text {
-      margin: 4px 0 38px;
-    }
-
-    .form__button {
-      margin-top: 5px;
-    }
-
-    .form__data-proc svg {
-      margin: 2px 0;
-    }
-  }
+.form--modal .form__data-proc svg {
+  margin: 2px 0;
 }

@@ -22,151 +22,135 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+}
 
-  & & {
-    width: 90%;
-    margin: 0 auto;
-  }
+.accordion .accordion {
+  width: 90%;
+  margin: 0 auto;
+}
 
-  &__element {
-    min-width: fit-content;
+.accordion__element {
+  min-width: fit-content;
 
-    &--wrap {
-      width: 100%;
-      max-width: 470px;
-
-      @include vp-767 {
-        max-width: none;
-      }
-    }
-  }
-
-  &__button {
-    @include rc-r-s15-h16;
-    letter-spacing: 0.05em;
-    color: $white-base;
-    display: block;
-    text-align: left;
-    position: relative;
-    background: none;
+  &--wrap {
     width: 100%;
-    padding: 7px 0;
-    margin-bottom: 15px;
-
-    text-transform: uppercase;
-
-    cursor: default;
+    max-width: 470px;
 
     @include vp-767 {
-      cursor: pointer;
-      width: 100%;
-      padding: 12px 15px 11px;
-      margin-bottom: 0;
-    }
-
-    @include hover-focus {
-      opacity: 1;
+      max-width: none;
     }
   }
+}
 
-  &__content {
-    &--wrap {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 220px);
-      gap: 0 30px;
-
-      @include vp-767 {
-        display: block;
-      }
-    }
-  }
-
-  &__wrapper {
-    @include vp-767 {
-      padding: 5px 15px 0;
-    }
-
-    & > li {
-      min-width: 220px;
-      margin-bottom: 8px;
-    }
-
-    & > li > a {
-      @include pt-r-s16-h22;
-      color: $white-base-opac;
-      display: block;
-      width: fit-content;
-
-      @include vp-767 {
-        @include pt-r-s14-h19;
-      }
-    }
-
-    &--tel {
-      & > li {
-        margin-bottom: 4px;
-      }
-
-      & > li > a {
-        @include pt-r-s16-h25;
-      }
-
-      @include vp-767 {
-        @include pt-r-s14-h25;
-        margin-top: 16px;
-
-        & > li {
-          margin-bottom: 11px;
-        }
-      }
-    }
-  }
+.accordion__button {
+  @include rc-r-s15-h16;
+  letter-spacing: 0.05em;
+  color: $white-base;
+  display: block;
+  text-align: left;
+  position: relative;
+  background: none;
+  width: 100%;
+  padding: 7px 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  cursor: default;
 
   @include vp-767 {
-    &__element:first-child {
-      border-top: 1px solid $white-fir-opac;
-    }
+    width: 100%;
+    padding: 12px 15px 11px;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
 
-    &__element {
-      width: 100%;
-      padding: 10px;
-      border-bottom: 1px solid $white-fir-opac;
-    }
+  @include hover-focus {
+    opacity: 1;
+  }
+}
 
-    &__element > &__button::before,
-    &__element > &__button::after {
-      position: absolute;
-      right: 15px;
-      content: "";
-      background-color: $white-fir;
-    }
+.accordion__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  gap: 0 30px;
 
-    &__element > &__button::before {
-      position: absolute;
-      right: 15px;
-      content: "";
-      margin: -2px 8px;
-      height: 15px;
-      width: 1px;
-      background-color: $white-fir;
-    }
+  @include vp-767 {
+    display: block;
+  }
+}
 
-    &__element > &__button::after {
-      position: absolute;
-      right: 15px;
-      content: "";
-      margin: 5px 1px;
-      height: 1px;
-      width: 15px;
-      background-color: $white-fir;
-    }
+.accordion__wrapper > li {
+  min-width: 220px;
+  margin-bottom: 8px;
+}
 
-    &__element.is-active {
-      padding-bottom: 6px;
-    }
+.accordion__wrapper > li > a {
+  @include pt-r-s16-h22;
+  color: $white-base-opac;
+  display: block;
+  width: fit-content;
 
-    &__element.is-active > &__button::before {
-      display: none;
+  @include vp-767 {
+    @include pt-r-s14-h19;
+  }
+}
+
+.accordion__wrapper--tel > li {
+  margin-bottom: 4px;
+
+  @include vp-767 {
+    margin-bottom: 11px;
+  }
+}
+
+.accordion__wrapper--tel > li > a {
+  @include pt-r-s16-h25;
+}
+
+@include vp-767 {
+  .accordion__wrapper {
+    padding: 5px 15px 0;
+
+    &--tel {
+      @include pt-r-s14-h25;
+      margin-top: 16px;
     }
+  }
+
+  .accordion__element:first-child {
+    border-top: 1px solid $white-fir-opac;
+  }
+
+  .accordion__element {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid $white-fir-opac;
+  }
+
+  .accordion__element > .accordion__button::before,
+  .accordion__element > .accordion__button::after {
+    position: absolute;
+    right: 15px;
+    content: "";
+    background-color: $white-fir;
+  }
+
+  .accordion__element > .accordion__button::before {
+    margin: -2px 8px;
+    height: 15px;
+    width: 1px;
+  }
+
+  .accordion__element > .accordion__button::after {
+    margin: 5px 1px;
+    height: 1px;
+    width: 15px;
+  }
+
+  .accordion__element.is-active {
+    padding-bottom: 6px;
+  }
+
+  .accordion__element.is-active > .accordion__button::before {
+    display: none;
   }
 }
