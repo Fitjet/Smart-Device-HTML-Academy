@@ -49,10 +49,12 @@
   @include vp-767 {
     @include pt-r-s14-h19;
     margin-bottom: 18px;
+  }
+}
 
-    & > .mobile-hide {
-      display: none;
-    }
+.company__wrapper .mobile-hide {
+  @include vp-767 {
+    display: none;
   }
 }
 

@@ -877,15 +877,13 @@ button,
   display: -ms-grid;
   display: grid;
   gap: 20px 30px;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
-.form form > * {
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-}
-
-.form label > input,
-.form label > textarea {
+.form input,
+.form textarea {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -903,50 +901,41 @@ button,
   transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
-.form label > input::-webkit-input-placeholder,
-.form label > textarea::-webkit-input-placeholder {
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
   font: inherit;
   color: inherit;
 }
 
-.form label > input::-moz-placeholder,
-.form label > textarea::-moz-placeholder {
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
   font: inherit;
   color: inherit;
 }
 
-.form label > input:-ms-input-placeholder,
-.form label > textarea:-ms-input-placeholder {
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
   font: inherit;
   color: inherit;
 }
 
-.form label > input::-ms-input-placeholder,
-.form label > textarea::-ms-input-placeholder {
+.form input::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
   font: inherit;
   color: inherit;
 }
 
-.form label > input::placeholder,
-.form label > textarea::placeholder {
+.form input::placeholder,
+.form textarea::placeholder {
   font: inherit;
   color: inherit;
 }
 
-.form label > textarea {
+.form textarea {
   height: 100%;
   max-height: 100%;
   padding-top: 23px;
   padding-bottom: 23px;
-}
-
-.form label.is-valid > input,
-.form label.is-valid > textarea {
-  background-color: rgba(21, 171, 0, 0.5);
-}
-
-.form label.is-invalid > input {
-  background-color: rgba(255, 20, 0, 0.5);
 }
 
 .form__textarea-label {
@@ -972,7 +961,7 @@ button,
   outline: none;
 }
 
-.form .form__data-proc input {
+.form__data-proc input {
   display: none;
 }
 
@@ -1004,18 +993,6 @@ button,
   -webkit-transition: color 0.3s ease, opacity 0.3s ease;
   -o-transition: color 0.3s ease, opacity 0.3s ease;
   transition: color 0.3s ease, opacity 0.3s ease;
-}
-
-.form .is-invalid .form__data-proc {
-  color: #ff1500;
-}
-
-.form .is-invalid .form__data-proc svg {
-  border-color: #ff1500;
-}
-
-.form .is-valid .form__data-proc svg {
-  stroke: #ffffff;
 }
 
 .form__button {
@@ -1073,8 +1050,29 @@ button,
   max-width: 100%;
 }
 
-.form--modal .form__data-proc svg {
+.form--modal svg {
   margin: 2px 0;
+}
+
+.is-valid > input,
+.is-valid > textarea {
+  background-color: rgba(21, 171, 0, 0.5);
+}
+
+.is-invalid > input {
+  background-color: rgba(255, 20, 0, 0.5);
+}
+
+.is-invalid .form__data-proc {
+  color: #ff1500;
+}
+
+.is-invalid svg {
+  border-color: #ff1500;
+}
+
+.is-valid svg {
+  stroke: #ffffff;
 }
 
 .footer {
@@ -1187,7 +1185,7 @@ button,
   margin-bottom: 8px;
 }
 
-.accordion__wrapper > li > a {
+.accordion__wrapper > a {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -1204,7 +1202,7 @@ button,
   margin-bottom: 4px;
 }
 
-.accordion__wrapper--tel > li > a {
+.accordion__wrapper--tel > a {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -1447,7 +1445,7 @@ button,
     margin: 7px 0 25px;
   }
 
-  .form label > textarea {
+  .form textarea {
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -1655,7 +1653,7 @@ button,
     margin-bottom: 18px;
   }
 
-  .company__wrapper p > .mobile-hide {
+  .company__wrapper .mobile-hide {
     display: none;
   }
 
@@ -1736,7 +1734,7 @@ button,
     margin-bottom: 34px;
   }
 
-  .form label > textarea {
+  .form textarea {
     padding-top: 23px;
     padding-bottom: 23px;
   }
@@ -1819,7 +1817,7 @@ button,
     display: block;
   }
 
-  .accordion__wrapper > li > a {
+  .accordion__wrapper > a {
     font-size: 14px;
     font-weight: 400;
     font-style: normal;

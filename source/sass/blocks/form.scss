@@ -23,14 +23,11 @@
 .form form {
   display: grid;
   gap: 20px 30px;
+  align-items: flex-end;
 }
 
-.form form > * {
-  align-self: flex-end;
-}
-
-.form label > input,
-.form label > textarea {
+.form input,
+.form textarea {
   @include pt-r-s16-h22;
   display: block;
   border: none;
@@ -48,7 +45,7 @@
   }
 }
 
-.form label > textarea {
+.form textarea {
   height: 100%;
   max-height: 100%;
   padding-top: 23px;
@@ -63,15 +60,6 @@
     padding-top: 23px;
     padding-bottom: 23px;
   }
-}
-
-.form label.is-valid > input,
-.form label.is-valid > textarea {
-  background-color: $valid-opac;
-}
-
-.form label.is-invalid > input {
-  background-color: $error-opac;
 }
 
 .form__textarea-label {
@@ -108,7 +96,7 @@
   }
 }
 
-.form .form__data-proc input {
+.form__data-proc input {
   display: none;
 }
 
@@ -135,18 +123,6 @@
   margin: 0;
   transition: color $trans-default,
     opacity $trans-default;
-}
-
-.form .is-invalid .form__data-proc {
-  color: $error;
-}
-
-.form .is-invalid .form__data-proc svg {
-  border-color: $error;
-}
-
-.form .is-valid .form__data-proc svg {
-  stroke: $white-base;
 }
 
 .form__button {
@@ -211,6 +187,27 @@
   max-width: 100%;
 }
 
-.form--modal .form__data-proc svg {
+.form--modal svg {
   margin: 2px 0;
+}
+
+.is-valid > input,
+.is-valid > textarea {
+  background-color: $valid-opac;
+}
+
+.is-invalid > input {
+  background-color: $error-opac;
+}
+
+.is-invalid .form__data-proc {
+  color: $error;
+}
+
+.is-invalid svg {
+  border-color: $error;
+}
+
+.is-valid svg {
+  stroke: $white-base;
 }

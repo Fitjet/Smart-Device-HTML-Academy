@@ -83,7 +83,7 @@
   margin-bottom: 8px;
 }
 
-.accordion__wrapper > li > a {
+.accordion__wrapper > a {
   @include pt-r-s16-h22;
   color: $white-base-opac;
   display: block;
@@ -102,7 +102,7 @@
   }
 }
 
-.accordion__wrapper--tel > li > a {
+.accordion__wrapper--tel > a {
   @include pt-r-s16-h25;
 }
 
